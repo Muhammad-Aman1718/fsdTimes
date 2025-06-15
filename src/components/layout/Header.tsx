@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <header className="border-b border-gray-200 py-5">
       <div className="container mx-auto px-4">
-        <div className="flex md:flex-row justify-between items-center">
+        <div className="flex md:flex-row justify-between items-center max-md:hidden">
           <div className=" max-md:flex   hidden ">
             <Menu />
           </div>
@@ -19,16 +19,17 @@ const Header = () => {
           <div className="text-xs ">Monday, June 10, 2024</div>
         </div>
 
-        <div className="flex md:flex-row justify-between items-center">
-          <div className=" max-md:flex   hidden ">
+        <div className="max-md:flex flex-col items-stretch   hidden">
+          <div className="max-md:flex justify-between items-center   hidden ">
             <Menu />
+            <div className="text-xs ">Monday, June 10, 2024</div>
           </div>
+          <hr className=" my-2 " />
           <div className="text-center py-4 max-md:py-0 ">
             <h1 className="max-md:text-[18px] text-4xl font-serif font-bold">
               The Faisalabad Times
             </h1>
           </div>
-          <div className="text-xs ">Monday, June 10, 2024</div>
         </div>
 
         {/* Main navigation */}

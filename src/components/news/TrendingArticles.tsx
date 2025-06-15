@@ -1,5 +1,5 @@
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from "next/image";
+import Link from "next/link";
 
 type TrendingArticle = {
   title: string;
@@ -19,18 +19,21 @@ export default function TrendingArticles({ articles }: TrendingArticlesProps) {
     <section className="mb-12">
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-2xl font-bold">Trending</h2>
-        <Link href="/category/trending" className="text-red-600 font-medium hover:underline">
+        <Link
+          href="/category/trending"
+          className="text-red-600 font-medium hover:underline"
+        >
           View All
         </Link>
       </div>
-      
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {articles.map((article, index) => (
           <article key={index} className="group">
             <Link href={article.url}>
               <div className="relative aspect-[4/3] w-full mb-3 overflow-hidden rounded-lg">
-                <Image 
-                  src={article.imageUrl} 
+                <Image
+                  src={article.imageUrl}
                   alt={article.title}
                   fill
                   className="object-cover transition-transform duration-300 group-hover:scale-105"

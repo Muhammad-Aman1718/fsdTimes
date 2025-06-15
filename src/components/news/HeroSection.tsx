@@ -1,5 +1,5 @@
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from "next/image";
+import Link from "next/link";
 
 type HeroSectionProps = {
   mainArticle: {
@@ -19,7 +19,7 @@ type HeroSectionProps = {
   }[];
 };
 
-export default function HeroSection({ mainArticle, secondaryArticles }: HeroSectionProps) {
+const HeroSection = ({ mainArticle, secondaryArticles }: HeroSectionProps) => {
   return (
     <section className="mb-12">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -28,8 +28,8 @@ export default function HeroSection({ mainArticle, secondaryArticles }: HeroSect
           <article className="relative h-[500px] overflow-hidden rounded-lg">
             <Link href={mainArticle.url}>
               <div className="relative h-full w-full">
-                <Image 
-                  src={mainArticle.imageUrl} 
+                <Image
+                  src={mainArticle.imageUrl}
                   alt={mainArticle.title}
                   fill
                   className="object-cover"
@@ -39,8 +39,12 @@ export default function HeroSection({ mainArticle, secondaryArticles }: HeroSect
                     <span className="inline-block px-2 py-1 bg-red-600 text-white text-xs font-semibold rounded mb-2">
                       {mainArticle.category}
                     </span>
-                    <h2 className="text-2xl md:text-3xl font-bold mb-2">{mainArticle.title}</h2>
-                    <p className="text-sm md:text-base mb-2 text-gray-200">{mainArticle.summary}</p>
+                    <h2 className="text-2xl md:text-3xl font-bold mb-2">
+                      {mainArticle.title}
+                    </h2>
+                    <p className="text-sm md:text-base mb-2 text-gray-200">
+                      {mainArticle.summary}
+                    </p>
                     <div className="flex items-center text-sm">
                       <span>{mainArticle.date}</span>
                     </div>
@@ -50,16 +54,19 @@ export default function HeroSection({ mainArticle, secondaryArticles }: HeroSect
             </Link>
           </article>
         </div>
-        
+
         {/* Secondary featured articles */}
         <div className="lg:col-span-1">
           <div className="grid grid-cols-1 gap-4 h-full">
             {secondaryArticles.map((article, index) => (
-              <article key={index} className="relative h-[240px] overflow-hidden rounded-lg">
+              <article
+                key={index}
+                className="relative h-[240px] overflow-hidden rounded-lg"
+              >
                 <Link href={article.url}>
                   <div className="relative h-full w-full">
-                    <Image 
-                      src={article.imageUrl} 
+                    <Image
+                      src={article.imageUrl}
                       alt={article.title}
                       fill
                       className="object-cover"
@@ -84,4 +91,6 @@ export default function HeroSection({ mainArticle, secondaryArticles }: HeroSect
       </div>
     </section>
   );
-}
+};
+
+export default HeroSection;

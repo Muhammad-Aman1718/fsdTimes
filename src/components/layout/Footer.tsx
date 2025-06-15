@@ -3,7 +3,7 @@ import Link from 'next/link';
 export default function Footer() {
   return (
     <footer className="bg-gray-100 py-10 mt-10 border-t border-gray-200">
-      <div className="container mx-auto px-4">
+      {/* <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <h3 className="font-bold text-lg mb-4">News</h3>
@@ -64,7 +64,7 @@ export default function Footer() {
             <Link href="/" className="hover:underline">Terms of Service</Link>
           </div>
         </div>
-      </div>
+      </div> */}
     </footer>
   );
 }

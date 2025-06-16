@@ -1,9 +1,13 @@
 import Link from "next/link";
 import { Menu } from "lucide-react";
+import useHeader from "@/hooks/useHeader";
 
 // import Image from "next/image";
 
 const Header = () => {
+
+  const {open, setOpen} = useHeader();
+
   return (
     <header className="border-b border-gray-200 py-5">
       <div className="container mx-auto px-4">

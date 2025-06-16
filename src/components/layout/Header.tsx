@@ -1,18 +1,12 @@
 "use client";
+import React from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
 import useHeader from "@/hooks/useHeader";
+import { Menu, X } from "lucide-react";
 import { menuItems } from "@/constant/data";
 
 const Header = () => {
-  const { open, setOpen } = useHeader();
-
-  const currentDate = new Date().toLocaleDateString("en-US", {
-    weekday: "long",
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
+  const { open, setOpen, currentDate } = useHeader();
 
   return (
     <header className="border-b border-gray-200 bg-white shadow-sm">
@@ -21,7 +15,7 @@ const Header = () => {
         <div className="container mx-auto px-4 py-5">
           <div className="flex justify-between items-center">
             <div className="text-center">
-              <h1 className="text-4xl font-serif font-bold text-gray-900 hover:text-gray-700 transition-colors">
+              <h1 className="text-4xl font-bold text-gray-900 hover:text-gray-700 transition-colors">
                 The Faisalabad Times
               </h1>
             </div>
@@ -67,8 +61,8 @@ const Header = () => {
           </div>
 
           {/* Mobile Logo */}
-          <div className="text-center py-4 border-b border-gray-100">
-            <h1 className="text-xl font-serif font-bold text-gray-900">
+          <div className="text-center ">
+            <h1 className="text-xl font-bold text-gray-900">
               The Faisalabad Times
             </h1>
           </div>

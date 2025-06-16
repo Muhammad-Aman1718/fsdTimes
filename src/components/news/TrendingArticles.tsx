@@ -14,10 +14,10 @@ type TrendingArticlesProps = {
   articles: TrendingArticle[];
 };
 
-export default function TrendingArticles({ articles }: TrendingArticlesProps) {
+const TrendingArticles = ({ articles }: TrendingArticlesProps) => {
   return (
     <section className="mb-12">
-      <div className="flex items-center justify-between mb-6">
+      <div className="flex items-center justify-between mb-6">``
         <h2 className="text-2xl font-bold">Trending</h2>
         <Link
           href="/category/trending"
@@ -58,4 +58,6 @@ export default function TrendingArticles({ articles }: TrendingArticlesProps) {
       </div>
     </section>
   );
-}
+};
+
+export default TrendingArticles;

@@ -3,6 +3,10 @@ import { useState } from "react";
 const useHeader = () => {
   const [open, setOpen] = useState(false);
 
+  const toggle = () => {
+    setOpen(!open);
+  };
+
   const currentDate = new Date().toLocaleDateString("en-US", {
     weekday: "long",
     year: "numeric",
@@ -12,7 +16,7 @@ const useHeader = () => {
 
   return {
     open,
-    setOpen,
+    toggle,
     currentDate,
   };
 };

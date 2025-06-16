@@ -1,5 +1,4 @@
-import Header from "../components/layout/Header";
-import Footer from "../components/layout/Footer";
+import React from "react";
 import HeroSection from "../components/news/HeroSection";
 import TrendingArticles from "../components/news/TrendingArticles";
 import CategorySection from "../components/news/CategorySection";
@@ -139,7 +138,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
+      {/* <Header /> */}
 
       <main className="flex-grow container mx-auto px-4 py-8">
         {/* Hero Section */}
@@ -149,24 +148,24 @@ export default function Home() {
         />
 
         {/* Trending Section */}
-        <TrendingArticles articles={trendingArticles} />
+        {/* <TrendingArticles articles={trendingArticles} /> */}
 
         {/* Technology Section */}
-        <CategorySection
+        {/* <CategorySection
           title="Technology"
           categorySlug="technology"
           articles={technologyArticles}
         />
 
-        {/* Health Section */}
+      // Health Section 
         <CategorySection
           title="Health"
           categorySlug="health"
           articles={healthArticles}
-        />
+        /> */}
 
         {/* Newsletter Section */}
-        <section className="mb-12 bg-gray-100 rounded-lg p-8">
+        {/* <section className="mb-12 bg-gray-100 rounded-lg p-8">
           <div className="max-w-2xl mx-auto text-center">
             <h2 className="text-2xl font-bold mb-4">
               Stay Updated with Our Newsletter
@@ -188,10 +187,10 @@ export default function Home() {
               </button>
             </form>
           </div>
-        </section>
+        </section> */}
       </main>
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

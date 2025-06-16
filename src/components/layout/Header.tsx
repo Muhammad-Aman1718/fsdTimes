@@ -6,7 +6,7 @@ import { Menu, X } from "lucide-react";
 import { menuItems } from "@/constant/data";
 
 const Header = () => {
-  const { open, setOpen, currentDate } = useHeader();
+  const { open, toggle, currentDate } = useHeader();
 
   return (
     <header className="border-b border-gray-200 bg-white shadow-sm">
@@ -48,7 +48,7 @@ const Header = () => {
           {/* Mobile Top Bar */}
           <div className="flex justify-between items-center">
             <button
-              onClick={() => setOpen(!open)}
+              onClick={toggle}
               className="p-2 rounded-md hover:bg-gray-100 transition-colors"
               aria-label="Toggle menu"
             >
@@ -80,7 +80,7 @@ const Header = () => {
                       className="block text-center py-3 px-4 text-sm font-medium text-gray-700 
                                hover:text-blue-600 hover:bg-white rounded-lg transition-all duration-200
                                border border-transparent hover:border-gray-200 hover:shadow-sm"
-                      onClick={() => setOpen(false)}
+                      onClick={toggle}
                     >
                       {item}
                     </Link>

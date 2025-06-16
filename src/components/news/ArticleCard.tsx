@@ -10,14 +10,14 @@ type ArticleCardProps = {
   compact?: boolean;
 };
 
-export default function ArticleCard({
+const ArticleCard = ({
   title,
   summary,
   imageUrl,
   category,
   url,
   compact = false,
-}: ArticleCardProps) {
+}: ArticleCardProps) => {
   return (
     <article
       className={`${compact ? "pb-4 mb-4" : "pb-6 mb-6"} border-b border-gray-200`}
@@ -46,4 +46,6 @@ export default function ArticleCard({
       </div>
     </article>
   );
-}
+};
+
+export default ArticleCard;

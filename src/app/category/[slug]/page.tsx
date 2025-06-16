@@ -1,7 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import Header from "../../../components/layout/Header";
-import Footer from "../../../components/layout/Footer";
 import { getCategoryArticles, getCategoryData } from "@/constant/data";
 
 const CategoryPage = ({ params }: { params: { slug: string } }) => {
@@ -10,7 +8,6 @@ const CategoryPage = ({ params }: { params: { slug: string } }) => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
 
       <main className="flex-grow container mx-auto px-4 py-8">
         <div className="mb-10 text-center">
@@ -65,7 +62,6 @@ const CategoryPage = ({ params }: { params: { slug: string } }) => {
         )}
       </main>
 
-      <Footer />
     </div>
   );
 };

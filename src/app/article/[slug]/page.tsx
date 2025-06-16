@@ -1,7 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import Header from "../../../components/layout/Header";
-import Footer from "../../../components/layout/Footer";
 import { getArticleData, getRelatedArticles } from "@/constant/data";
 // import { client } from "../../lib/sanity";
 // import imageUrlBuilder from "@sanity/image-url";
@@ -25,7 +23,7 @@ const ArticlePage = ({ params }: { params: { slug: string } }) => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
+      {/* <Header /> */}
 
       <main className="flex-grow container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
@@ -177,7 +175,7 @@ const ArticlePage = ({ params }: { params: { slug: string } }) => {
         </div>
       </main>
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

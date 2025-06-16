@@ -1,13 +1,12 @@
-import {useState} from 'react'
+import { useState } from "react";
 
 const useHeader = () => {
-
-    const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
 
   return {
     open,
-    setOpen
-  }
-}
+    setOpen,
+  };
+};
 
-export default useHeader
+export default useHeader;

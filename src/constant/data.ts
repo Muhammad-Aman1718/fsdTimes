@@ -202,3 +202,18 @@ export const getCategoryArticles = (slug: string) => {
   // Return all articles for 'trending' category
   return articles;
 };
+
+export const menuItems = [
+  "Politics",
+  "F.S.D.",
+  "Business",
+  "Opinion",
+  "Science",
+  "Health",
+  "Sports",
+  "Arts",
+  "Books",
+  "Style",
+  "Food",
+  "Travel",
+];

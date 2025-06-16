@@ -217,3 +217,81 @@ export const menuItems = [
   "Food",
   "Travel",
 ];
+
+export const categories = [
+  {
+    title: "News",
+    links: [
+      "Home Page",
+      "World",
+      "Pakistan",
+      "Politics",
+      "Business",
+      "Technology",
+      "Science",
+      "Health",
+    ],
+  },
+  {
+    title: "Opinion",
+    links: [
+      "Editorials",
+      "Columns",
+      "Letters",
+      "Op-Eds",
+      "Analysis",
+      "Commentary",
+      "Interviews",
+    ],
+  },
+  {
+    title: "Arts & Culture",
+    links: [
+      "Art & Design",
+      "Books",
+      "Music",
+      "Movies",
+      "Theater",
+      "Television",
+      "Dance",
+      "Exhibitions",
+    ],
+  },
+  {
+    title: "Living",
+    links: [
+      "Food",
+      "Travel",
+      "Style",
+      "Education",
+      "Automobiles",
+      "Real Estate",
+      "Gardening",
+      "Wellness",
+    ],
+  },
+  {
+    title: "Sports",
+    links: [
+      "Cricket",
+      "Football",
+      "Hockey",
+      "Tennis",
+      "Olympics",
+      "Local Sports",
+      "College Sports",
+    ],
+  },
+  {
+    title: "More",
+    links: [
+      "Multimedia",
+      "Podcasts",
+      "Photos",
+      "Crossword",
+      "Weather",
+      "Events",
+      "Classifieds",
+    ],
+  },
+];

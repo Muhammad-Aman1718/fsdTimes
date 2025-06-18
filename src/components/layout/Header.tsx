@@ -12,7 +12,7 @@ const Header = () => {
     <header className="border-b border-gray-200 bg-white shadow-sm">
       {/* Desktop Header */}
       <div className="hidden md:block">
-        <div className="container mx-auto px-4 py-5">
+        <div className="max-w-screen-xl mx-auto px-4 py-5">
           <div className="flex justify-between items-center">
             <div className="text-center">
               <h1 className="text-4xl font-bold text-gray-900 hover:text-gray-700 transition-colors">
@@ -44,7 +44,7 @@ const Header = () => {
 
       {/* Mobile Header */}
       <div className="md:hidden">
-        <div className="container mx-auto px-4 py-3">
+        <div className="max-w-screen-xl mx-auto px-4 py-3">
           {/* Mobile Top Bar */}
           <div className="flex justify-between items-center">
             <button
@@ -71,7 +71,7 @@ const Header = () => {
         {/* Mobile Navigation Menu */}
         {open && (
           <div className="bg-gray-50 border-t border-gray-200 animate-in slide-in-from-top duration-200">
-            <nav className="container mx-auto px-4 py-4">
+            <nav className="max-w-screen-xl mx-auto px-4 py-4">
               <ul className="grid grid-cols-2 gap-3">
                 {menuItems.map((item, index) => (
                   <li key={index}>

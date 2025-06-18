@@ -15,7 +15,7 @@ import CategorySection from "@/components/news/CategorySection";
 
 const Home = () => {
   return (
-    <main className="container mx-auto px-4 py-8">
+    <main className=" max-w-screen-xl  mx-auto px-4 py-8">
       <PostCard
         title="Article Title"
         summary="Article Summary"
@@ -24,6 +24,7 @@ const Home = () => {
         date="2023-01-01"
         readTime="5 min read"
         url="/article"
+        layout="horizontal"
       />
 
       <CategorySection categoryTitle="Technology">
@@ -35,6 +36,7 @@ const Home = () => {
           date="2023-01-01"
           readTime="5 min read"
           url="/article"
+          layout="horizontal"
         />
         <PostCard
           title="Article Title"
@@ -44,6 +46,7 @@ const Home = () => {
           date="2023-01-01"
           readTime="5 min read"
           url="/article"
+          layout="horizontal"
         />
         <PostCard
           title="Article Title"

@@ -5,7 +5,7 @@ import { categories } from "@/constant/data";
 const Footer = () => {
   return (
     <footer className="bg-gray-50 border-t border-gray-200 pt-12 pb-8">
-      <div className="container mx-auto px-4">
+      <div className="max-w-screen-xl mx-auto px-4">
         {/* Categories grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 mb-10">
           {categories.map((category, index) => (

@@ -14,7 +14,7 @@ const CategorySection = ({ categoryTitle, children }: CategorySectionProps) => {
         </h2>
         <button className=" text-[14px] leading-3 ">read more</button>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))]">
         {children}
       </div>
     </section>

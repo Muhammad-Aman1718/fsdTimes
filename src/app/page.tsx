@@ -2,6 +2,7 @@ import React from "react";
 import HeroSection from "../components/news/HeroSection";
 import TrendingArticles from "../components/news/TrendingArticles";
 import CategorySection from "../components/news/CategorySection";
+import PostCard from "@/components/news/PostCard";
 
 export default function Home() {
   // Mock data - in a real app, this would come from an API or CMS
@@ -147,8 +148,12 @@ export default function Home() {
           secondaryArticles={heroData.secondaryArticles}
         />
 
+        <PostCard />
+
         {/* Trending Section */}
         {/* <TrendingArticles articles={trendingArticles} /> */}
+
+    
 
         {/* Technology Section */}
         {/* <CategorySection

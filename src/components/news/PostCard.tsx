@@ -1,39 +1,74 @@
 import React from "react";
-import Image, { StaticImageData } from "next/image";
-import Img from "../../../public/assets/images.jpeg";
+import Image from "next/image";
+import Link from "next/link";
 
 interface PostCardProps {
   title: string;
-  image: StaticImageData;
+  summary: string;
+  imageUrl: string;
+  category: string;
+  date: string;
+  readTime?: string;
+  url: string;
+  layout?: "horizontal" | "vertical";
 }
 
-const PostCard = ({ title, image }: PostCardProps) => {
+const PostCard = ({
+  title,
+  summary,
+  imageUrl,
+  category,
+  date,
+  readTime,
+  url,
+  layout = "horizontal",
+}: PostCardProps) => {
   return (
-    <article className="border-b border-gray-200 pb-6 mb-6">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div>
-          <a href="/article/example" className="block">
-            <div className="relative aspect-[4/3] w-full">
+    <article
+      className={`group hover:shadow-lg transition-all duration-300 rounded-lg overflow-hidden ${layout === "horizontal" ? "" : "flex flex-col"}`}
+    >
+      <div
+        className={`${layout === "horizontal" ? "grid grid-cols-1 md:grid-cols-2 gap-6" : "flex flex-col"}`}
+      >
+        <div className={layout === "horizontal" ? "" : "w-full"}>
+          <Link href={url} className="block">
+            <div className="relative aspect-[16/9] w-full overflow-hidden rounded-lg">
               <Image
-                src={Img}
-                alt="Example Post"
-                className="object-cover w-[192px] h-[115px] "
+                src={imageUrl}
+                alt={title}
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
             </div>
-          </a>
+          </Link>
         </div>
-        <div>
-          <span className="text-xs font-medium uppercase tracking-wider">
-            Category
-          </span>
-          <h2 className="text-2xl md:text-3xl font-serif font-bold mt-2 mb-3">
-            <a href="/article/example" className="hover:underline">
-              Example Post Title
-            </a>
-          </h2>
-          <p className="text-gray-700 leading-relaxed">
-            This is a brief summary of the post content.
-          </p>
+        <div className="flex flex-col">
+          <div className="p-4">
+            <div className="flex items-center gap-3 text-xs text-gray-600 mb-3">
+              <Link
+                href={`/category/${category.toLowerCase()}`}
+                className="font-medium uppercase tracking-wider text-red-600 hover:text-red-700"
+              >
+                {category}
+              </Link>
+              <span>•</span>
+              <span>{date}</span>
+              {readTime && (
+                <>
+                  <span>•</span>
+                  <span>{readTime}</span>
+                </>
+              )}
+            </div>
+            <Link href={url}>
+              <h2 className="text-xl md:text-2xl font-serif font-bold mb-3 line-clamp-3 group-hover:text-red-600 transition-colors">
+                {title}
+              </h2>
+            </Link>
+            <p className="text-gray-600 leading-relaxed line-clamp-3 text-sm md:text-base">
+              {summary}
+            </p>
+          </div>
         </div>
       </div>
     </article>

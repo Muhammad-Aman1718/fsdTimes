@@ -15,7 +15,7 @@ import CategorySection from "@/components/news/CategorySection";
 
 const Home = () => {
   return (
-    <main className=" max-w-screen-xl mx-auto px-4 py-8">
+    <main className=" max-w-screen-xl mx-auto px-2.5 py-8">
       <PostCard
         title="Article Title"
         summary="Article Summary"
@@ -24,66 +24,92 @@ const Home = () => {
         date="2023-01-01"
         readTime="5 min read"
         url="/article"
-        layout="horizontal"
+        // layout="horizontal"
       />
 
-      <CategorySection categoryTitle="Technology">
-        <PostCard
-          title="Article Title"
-          summary="Article Summary"
-          imageUrl="/article-image.jpg"
-          category="Category"
-          date="2023-01-01"
-          readTime="5 min read"
-          url="/article"
-          layout="horizontal"
-        />
-        <PostCard
-          title="Article Title"
-          summary="Article Summary"
-          imageUrl="/article-image.jpg"
-          category="Category"
-          date="2023-01-01"
-          readTime="5 min read"
-          url="/article"
-          layout="horizontal"
-        />
-        <PostCard
-          title="Article Title"
-          summary="Article Summary"
-          imageUrl="/article-image.jpg"
-          category="Category"
-          date="2023-01-01"
-          readTime="5 min read"
-          url="/article"
-        />
-        <PostCard
-          title="Article Title"
-          summary="Article Summary"
-          imageUrl="/article-image.jpg"
-          category="Category"
-          date="2023-01-01"
-          readTime="5 min read"
-          url="/article"
-        />
-        <PostCard
-          title="Article Title"
-          summary="Article Summary"
-          imageUrl="/article-image.jpg"
-          category="Category"
-          date="2023-01-01"
-          readTime="5 min read"
-          url="/article"
-        />
-        <PostCard
-          title="Article Title"
-          summary="Article Summary"
-          imageUrl="/article-image.jpg"
-          category="Category"
-          date="2023-01-01"
-          readTime="5 min read"
-          url="/article"
-        />
+      {/* <CategorySection categoryTitle="Technology">
+          <PostCard
+            title="Article Title"
+            summary="Article Summary"
+            imageUrl="/article-image.jpg"
+            category="Category"
+            date="2023-01-01"
+            readTime="5 min read"
+            url="/article"
+            // layout="horizontal"
+          />
+          <span className=" border w-[1px]  "></span>
+          <PostCard
+            title="Article Title"
+            summary="Article Summary"
+            imageUrl="/article-image.jpg"
+            category="Category"
+            date="2023-01-01"
+            readTime="5 min read"
+            url="/article"
+            // layout="horizontal"
+          />
+          <span className=" border w-[1px]  "></span>
+          <PostCard
+            title="Article Title"
+            summary="Article Summary"
+            imageUrl="/article-image.jpg"
+            category="Category"
+            date="2023-01-01"
+            readTime="5 min read"
+            url="/article"
+          />
+          <span className=" border w-[1px]  "></span>
+          <PostCard
+            title="Article Title"
+            summary="Article Summary"
+            imageUrl="/article-image.jpg"
+            category="Category"
+            date="2023-01-01"
+            readTime="5 min read"
+            url="/article"
+          />
+          <span className=" border w-[1px]  "></span>
+          <PostCard
+            title="Article Title"
+            summary="Article Summary"
+            imageUrl="/article-image.jpg"
+            category="Category"
+            date="2023-01-01"
+            readTime="5 min read"
+            url="/article"
+          />
+          <span className=" border w-[1px]  "></span>
+          <PostCard
+            title="Article Title"
+            summary="Article Summary"
+            imageUrl="/article-image.jpg"
+            category="Category"
+            date="2023-01-01"
+            readTime="5 min read"
+            url="/article"
+          />
+          <span className=" border w-[1px]  "></span>
+      </CategorySection> */}
+
+      <CategorySection>
+        {[1, 2, 3, 4, 5, 6].map((_, i) => (
+          <div key={i} className="">
+            <PostCard
+              title={`Article Title ${i + 1}`}
+              summary="Article Summary"
+              imageUrl="/article-image.jpg"
+              category="Category"
+              date="2023-01-01"
+              readTime="5 min read"
+              url="/article"
+            />
+            {/* Add vertical separator only if not the last item */}
+            {i !== 5 && (
+              <span className="absolute  right-0 top-0 h-full w-[1px]"></span>
+            )}
+          </div>
+        ))}
       </CategorySection>
 
       {/* <section className="mb-12">

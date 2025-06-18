@@ -26,10 +26,10 @@ const PostCard = ({
 }: PostCardProps) => {
   return (
     <article
-      className={`border w-[200px] group overflow-hidden ${layout === "horizontal" ? "" : "flex flex-col"}`}
+      className={` p-2.5    group overflow-hidden ${layout === "horizontal" ? "" : "flex flex-col"}`}
     >
       <div
-        className={` border ${layout === "horizontal" ? "grid grid-cols-1 md:grid-cols-2 gap-6" : "flex flex-col"}`}
+        className={`  ${layout === "horizontal" ? "grid grid-cols-1 md:grid-cols-2 gap-6" : "flex flex-col"}`}
       >
         <div className={layout === "horizontal" ? "" : "w-full"}>
           <Link href={url} className="block">
@@ -62,7 +62,7 @@ const PostCard = ({
               )} */}
             </div>
             <Link href={url}>
-              <h2 className="text-xl md:text-2xl font-serif font-bold mb-3 line-clamp-3 group-hover:text-red-600 transition-colors">
+              <h2 className="text-[16px] leading-[23px] font-serif font-bold mb-3 line-clamp-3 group-hover:text-red-600 transition-colors">
                 {/* {title}  */}
                 prime minister of pakistan
               </h2>

@@ -12,7 +12,7 @@ const Header = () => {
     <header className="border-b border-gray-200 bg-white shadow-sm">
       {/* Desktop Header */}
       <div className="hidden md:block">
-        <div className="max-w-screen-xl mx-auto px-4 py-5">
+        <div className="max-w-screen-xl mx-auto px-2.5 py-5">
           <div className="flex justify-between items-center">
             <div className="text-center">
               <h1 className="text-4xl font-bold text-gray-900 hover:text-gray-700 transition-colors">

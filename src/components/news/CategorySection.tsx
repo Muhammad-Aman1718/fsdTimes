@@ -3,9 +3,14 @@ import React from "react";
 interface CategorySectionProps {
   categoryTitle?: string;
   children?: React.ReactNode;
+  className?: string;
 }
 
-const CategorySection = ({ categoryTitle, children }: CategorySectionProps) => {
+const CategorySection = ({
+  categoryTitle,
+  children,
+  className,
+}: CategorySectionProps) => {
   return (
     <section>
       <div className=" flex justify-between items-center px-2.5 ">
@@ -17,7 +22,9 @@ const CategorySection = ({ categoryTitle, children }: CategorySectionProps) => {
         </button>
       </div>
       {/* <div className="flex flex-wrap"> */}
-      <div className="grid grid-cols-[repeat(auto-fit,minmax(120px,1fr))]">
+      <div
+        className={` ${className}  grid grid-cols-[repeat(auto-fit,minmax(120px,1fr))]  `}
+      >
         {children}
       </div>
     </section>

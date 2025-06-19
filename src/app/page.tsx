@@ -94,7 +94,63 @@ const Home = () => {
               url="/article"
             />
             {i !== 5 && (
-              <span className="absolute right-0 top-0 h-[150px] w-[1px] bg-black "></span>
+              <span className="absolute right-0 top-0 h-full w-[1px] bg-black "></span>
+            )}
+          </div>
+        ))}
+      </CategorySection>
+      <div className="grid grid-cols-2">
+        <CategorySection>
+          {[1, 2, 3].map((_, i) => (
+            <div key={i} className="relative">
+              <PostCard
+                title={`Article Title ${i + 1}`}
+                summary="Article Summary"
+                imageUrl="/article-image.jpg"
+                category="Category"
+                date="2023-01-01"
+                readTime="5 min read"
+                url="/article"
+              />
+              {i !== 2 && (
+                <span className="absolute right-0 top-0 h-full w-[1px] bg-black "></span>
+              )}
+            </div>
+          ))}
+        </CategorySection>
+        <CategorySection>
+          {[1, 2, 3].map((_, i) => (
+            <div key={i} className="relative">
+              <PostCard
+                title={`Article Title ${i + 1}`}
+                summary="Article Summary"
+                imageUrl="/article-image.jpg"
+                category="Category"
+                date="2023-01-01"
+                readTime="5 min read"
+                url="/article"
+              />
+              {i !== 2 && (
+                <span className="absolute right-0 top-0 h-full w-[1px] bg-black "></span>
+              )}
+            </div>
+          ))}
+        </CategorySection>
+      </div>
+      <CategorySection>
+        {[1, 2, 3, 4, 5, 6].map((_, i) => (
+          <div key={i} className="relative">
+            <PostCard
+              title={`Article Title ${i + 1}`}
+              summary="Article Summary"
+              imageUrl="/article-image.jpg"
+              category="Category"
+              date="2023-01-01"
+              readTime="5 min read"
+              url="/article"
+            />
+            {i !== 5 && (
+              <span className="absolute right-0 top-0 h-full w-[1px] bg-black "></span>
             )}
           </div>
         ))}
@@ -112,7 +168,7 @@ const Home = () => {
               url="/article"
             />
             {i !== 5 && (
-              <span className="absolute right-0 top-0 h-[150px] w-[1px] bg-black "></span>
+              <span className="absolute right-0 top-0 h-full w-[1px] bg-black "></span>
             )}
           </div>
         ))}
@@ -130,61 +186,7 @@ const Home = () => {
               url="/article"
             />
             {i !== 5 && (
-              <span className="absolute right-0 top-0 h-[150px] w-[1px] bg-black "></span>
-            )}
-          </div>
-        ))}
-      </CategorySection>
-      <CategorySection>
-        {[1, 2, 3, 4, 5, 6].map((_, i) => (
-          <div key={i} className="relative">
-            <PostCard
-              title={`Article Title ${i + 1}`}
-              summary="Article Summary"
-              imageUrl="/article-image.jpg"
-              category="Category"
-              date="2023-01-01"
-              readTime="5 min read"
-              url="/article"
-            />
-            {i !== 5 && (
-              <span className="absolute right-0 top-0 h-[150px] w-[1px] bg-black "></span>
-            )}
-          </div>
-        ))}
-      </CategorySection>
-      <CategorySection>
-        {[1, 2, 3, 4, 5, 6].map((_, i) => (
-          <div key={i} className="relative">
-            <PostCard
-              title={`Article Title ${i + 1}`}
-              summary="Article Summary"
-              imageUrl="/article-image.jpg"
-              category="Category"
-              date="2023-01-01"
-              readTime="5 min read"
-              url="/article"
-            />
-            {i !== 5 && (
-              <span className="absolute right-0 top-0 h-[150px] w-[1px] bg-black "></span>
-            )}
-          </div>
-        ))}
-      </CategorySection>
-      <CategorySection>
-        {[1, 2, 3, 4, 5, 6].map((_, i) => (
-          <div key={i} className="relative">
-            <PostCard
-              title={`Article Title ${i + 1}`}
-              summary="Article Summary"
-              imageUrl="/article-image.jpg"
-              category="Category"
-              date="2023-01-01"
-              readTime="5 min read"
-              url="/article"
-            />
-            {i !== 5 && (
-              <span className="absolute right-0 top-0 h-[150px] w-[1px] bg-black "></span>
+              <span className="absolute right-0 top-0 h-full w-[1px] bg-black "></span>
             )}
           </div>
         ))}

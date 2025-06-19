@@ -44,33 +44,23 @@ const PostCard = ({
           </Link>
         </div>
         <div className="flex flex-col">
-          <div className="p-4">
-            <div className="flex items-center gap-3 text-xs text-gray-600 mb-3">
-              {/* <Link
-                href={`/category/${category.toLowerCase()}`}
-                className="font-medium uppercase tracking-wider text-red-600 hover:text-red-700"
-              >
-                {category}
-              </Link> */}
-              {/* <span>•</span>
-              <span>{date}</span>
-              {readTime && (
-                <>
-                  <span>•</span>
-                  <span>{readTime}</span>
-                </>
-              )} */}
-            </div>
+          <div className="py-4">
             <Link href={url}>
-              <h2 className="text-[16px] leading-[23px] font-serif font-bold mb-3 line-clamp-3 group-hover:text-red-600 transition-colors">
+              <h2 className="text-[16px] leading-[23px] font-serif font-bold  group-hover:text-red-600 transition-colors">
                 {/* {title}  */}
-                prime minister of pakistan
+                Ishaq Dar “prudently” dismisses Pakistan's financial crisis
               </h2>
             </Link>
             <p className="text-gray-600 leading-relaxed line-clamp-3 text-sm md:text-base">
               {/* {summary} */}
               fdjsalkjfdlksajflsafdsafdsa
             </p>
+            <div className="flex items-center justify-between mt-2">
+              <span className="text-gray-500  text-[10px] ">{date}</span>
+              {readTime && (
+                <span className="text-gray-500 text-[10px]">{readTime}</span>
+              )}
+            </div>
           </div>
         </div>
       </div>

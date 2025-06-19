@@ -16,7 +16,8 @@ const CategorySection = ({ categoryTitle, children }: CategorySectionProps) => {
           read more
         </button>
       </div>
-      <div className="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))]">
+      {/* <div className="flex flex-wrap"> */}
+      <div className="grid grid-cols-[repeat(auto-fit,minmax(120px,1fr))]">
         {children}
       </div>
     </section>

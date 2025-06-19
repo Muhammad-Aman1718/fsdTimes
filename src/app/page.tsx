@@ -94,7 +94,7 @@ const Home = () => {
 
       <CategorySection>
         {[1, 2, 3, 4, 5, 6].map((_, i) => (
-          <div key={i} className="">
+          <div key={i} className="relative">
             <PostCard
               title={`Article Title ${i + 1}`}
               summary="Article Summary"
@@ -104,9 +104,8 @@ const Home = () => {
               readTime="5 min read"
               url="/article"
             />
-            {/* Add vertical separator only if not the last item */}
             {i !== 5 && (
-              <span className="absolute  right-0 top-0 h-full w-[1px]"></span>
+              <span className="absolute right-0 top-0 h-[150px] w-[1px] bg-black "></span>
             )}
           </div>
         ))}

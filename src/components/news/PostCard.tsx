@@ -56,12 +56,9 @@ const PostCard = ({
               Ishaq Dar, the federal minister for finance and revenue,
               criticised Imran Khan
             </p>
-            {/* <div className="flex items-center justify-between mt-2"> */}
-            {/* <span className="text-gray-500  text-[10px] ">{date}</span> */}
             <h4 className="text-gray-500 text-[14px] leading-[23.8px] mb-[3px] ">
               {readTime}
             </h4>
-            {/* </div> */}
           </div>
         </div>
       </div>

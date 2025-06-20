@@ -16,7 +16,7 @@ import CategorySection from "@/components/news/CategorySection";
 const Home = () => {
   return (
     <main className=" max-w-screen-xl mx-auto px-2.5 py-8">
-      <CategorySection>
+      <CategorySection >
         {[1, 2, 3, 4, 5, 6].map((_, i) => (
           <div key={i} className="relative">
             <PostCard
@@ -27,6 +27,7 @@ const Home = () => {
               date="2023-01-01"
               readTime="5 min read"
               url="/article"
+              // layout="horizontal"
             />
             {i !== 5 && (
               <span className="absolute right-0 top-0 h-full w-[1px] bg-black "></span>

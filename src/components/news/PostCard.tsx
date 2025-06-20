@@ -32,15 +32,16 @@ const PostCard = ({
         className={`  ${layout === "horizontal" ? "grid grid-cols-1 md:grid-cols-2 gap-6" : "flex flex-col"}`}
       >
         <div className={layout === "horizontal" ? "" : "w-full"}>
-          <Link href={url} className="block">
-            <div className="relative aspect-[2/1] w-full overflow-hidden">
-              <Image
-                src={Img}
-                alt={title}
-                fill
-                className="object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-            </div>
+          <Link href={url} className="">
+            {/* <div className="relative aspect-[2/1] w-full overflow-hidden"> */}
+            <Image
+              src={Img}
+              alt={title}
+              // fill
+              // className="object-cover group-hover:scale-105 transition-transform duration-500"
+              className=""
+            />
+            {/* </div> */}
           </Link>
         </div>
         <div className="flex flex-col">

@@ -13,7 +13,7 @@ const CategorySection = ({
 }: CategorySectionProps) => {
   return (
     <section>
-      <div className=" flex justify-between items-center px-2.5 my ">
+      <div className=" flex justify-between items-center px-2.5 my-6 ">
         <h2 className=" leading-4 text-[18px] font-bold   ">
           Category News {categoryTitle}
         </h2>

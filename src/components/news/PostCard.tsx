@@ -26,7 +26,7 @@ const PostCard = ({
 }: PostCardProps) => {
   return (
     <article
-      className={` px-2.5 group overflow-hidden ${layout === "horizontal" ? "" : "flex flex-col"}`}
+      className={`border px-2.5 group overflow-hidden ${layout === "horizontal" ? "" : "flex flex-col"}`}
     >
       <div
         className={`  ${layout === "horizontal" ? "grid grid-cols-1 md:grid-cols-2 gap-6" : "flex flex-col"}`}

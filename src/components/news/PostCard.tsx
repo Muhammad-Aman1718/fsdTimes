@@ -37,6 +37,8 @@ const PostCard = ({
             <Image
               src={Img}
               alt={title}
+              width={500}
+              height={300}
               // fill
               // className="object-cover group-hover:scale-105 transition-transform duration-500"
               className=""

@@ -17,7 +17,7 @@ const Home = () => {
   return (
     <main className=" max-w-screen-xl mx-auto px-2.5 py-8">
       <div className="grid grid-cols-2 gap-4 mb-8">
-        <CategorySection categoryTitle="Latest" layout="list">
+        <CategorySection categoryTitle="Latest News" layout="list">
           {[1, 2, 3].map((_, i) => (
             <div key={i} className="relative">
               <PostCard
@@ -36,7 +36,7 @@ const Home = () => {
             </div>
           ))}
         </CategorySection>
-        <CategorySection categoryTitle="Popular" layout="list">
+        <CategorySection categoryTitle="Tech News" layout="list">
           {[1, 2, 3].map((_, i) => (
             <div key={i} className="relative">
               <PostCard
@@ -56,7 +56,7 @@ const Home = () => {
           ))}
         </CategorySection>
       </div>
-      <CategorySection layout="grid">
+      <CategorySection categoryTitle="Popular Articles" layout="grid">
         {[1, 2, 3, 4, 5, 6].map((_, i) => (
           <div key={i} className="relative">
             <PostCard
@@ -76,7 +76,7 @@ const Home = () => {
         ))}
       </CategorySection>
       <div className="grid grid-cols-2">
-        <CategorySection layout="grid">
+        <CategorySection categoryTitle="" layout="grid">
           {[1, 2, 3].map((_, i) => (
             <div key={i} className="relative">
               <PostCard

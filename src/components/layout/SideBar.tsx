@@ -1,9 +1,17 @@
-import React from 'react'
+import React from 'react';
 
-const SideBar = () => {
-  return (
-    <div>SideBar</div>
-  )
+interface SideBarProps {
+  title: string;
+  children: React.ReactNode;
 }
 
-export default SideBar
+const SideBar: React.FC<SideBarProps> = ({ title, children }) => {
+  return (
+    <aside className="bg-gray-50 rounded-lg shadow p-4">
+      <h2 className="text-xl font-semibold mb-4 border-b pb-2">{title}</h2>
+      <div>{children}</div>
+    </aside>
+  );
+};
+
+export default SideBar;

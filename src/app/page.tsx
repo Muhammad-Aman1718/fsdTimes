@@ -1,55 +1,124 @@
-// import React from "react";
-// import PostCard from "@/components/news/PostCard";
-// import CategorySection from "@/components/news/CategorySection";
-// import { getCategoryArticles, getCategoryData } from "@/constant/data";
-// import Link from "next/link";
+import React from "react";
+import PostCard from "@/components/news/PostCard";
+import CategorySection from "@/components/news/CategorySection";
+import Link from "next/link";
 
-// const featuredCategories = ["technology", "business", "climate", "health"];
+// Static blog data
+const blogPosts = [
+  {
+    id: 1,
+    title: "Getting Started with Next.js",
+    summary:
+      "Learn the basics of Next.js and how to build modern web applications.",
+    imageUrl: "/next.svg",
+    category: "Technology",
+    date: "June 15, 2024",
+    readTime: "5 min read",
+    content:
+      "<p>Next.js is a React framework that enables server-side rendering and static site generation...</p>",
+    comments: [
+      {
+        id: 1,
+        author: "John Doe",
+        content: "Great article! Very helpful for beginners.",
+        date: "June 16, 2024",
+      },
+      {
+        id: 2,
+        author: "Jane Smith",
+        content:
+          "I've been using Next.js for a while and this covers all the basics nicely.",
+        date: "June 17, 2024",
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: "The Future of Web Development",
+    summary: "Exploring emerging trends and technologies in web development.",
+    imageUrl: "/vercel.svg",
+    category: "Technology",
+    date: "June 10, 2024",
+    readTime: "7 min read",
+    content:
+      "<p>The web development landscape is constantly evolving with new frameworks and tools...</p>",
+    comments: [
+      {
+        id: 1,
+        author: "Alex Johnson",
+        content: "Interesting perspective on where web dev is heading.",
+        date: "June 11, 2024",
+      },
+    ],
+  },
+];
 
-// const Home = async () => {
-//   // Get articles for featured categories
-//   const featuredSections = featuredCategories.map((slug) => ({
-//     ...getCategoryData(slug),
-//     articles: getCategoryArticles(slug).slice(0, 3),
-//     slug,
-//   }));
-//   const trendingArticles = getCategoryArticles("trending").slice(0, 6);
-
+// const Home = () => {
 //   return (
 //     <main className="max-w-screen-xl mx-auto px-4 py-8 space-y-12">
-//       {/* Featured Categories */}
-//       <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
-//         {featuredSections.map((category) => (
-//           <CategorySection
-//             key={category.slug}
-//             categoryTitle={category.title}
-//             layout="list"
-//           >
-//             {category.articles.map((article) => (
-//               <div
-//                 key={article.url}
-//                 className="relative hover:bg-gray-50 transition-colors"
-//               >
-//                 <PostCard
-//                   title={article.title}
-//                   summary={article.summary}
-//                   imageUrl={article.imageUrl}
-//                   category={article.category}
-//                   date={article.date}
-//                   readTime={article.readTime}
-//                   url={article.url}
-//                   layout="horizontal"
-//                 />
+//       {/* Featured Posts */}
+//       <section className="space-y-8">
+//         <h2 className="text-2xl font-bold">Latest Posts</h2>
+//         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+//           {blogPosts.map((post) => (
+//             <div
+//               key={post.id}
+//               className="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+//             >
+//               <PostCard
+//                 title={post.title}
+//                 summary={post.summary}
+//                 imageUrl={post.imageUrl}
+//                 category={post.category}
+//                 date={post.date}
+//                 readTime={post.readTime}
+//                 url={`/article/${post.id}`}
+//                 layout="vertical"
+//               />
+//             </div>
+//           ))}
+//         </div>
+//       </section>
+//       {/* Comments Section */}
+//       <section className="space-y-6">
+//         <h2 className="text-2xl font-bold">Recent Comments</h2>
+//         <div className="space-y-4">
+//           {blogPosts
+//             .flatMap((post) => post.comments)
+//             .slice(0, 5)
+//             .map((comment) => (
+//               <div key={comment.id} className="bg-gray-50 p-4 rounded-lg">
+//                 <div className="flex items-center space-x-2 mb-2">
+//                   <span className="font-medium">{comment.author}</span>
+//                   <span className="text-gray-500 text-sm">{comment.date}</span>
+//                 </div>
+//                 <p className="text-gray-700">{comment.content}</p>
 //               </div>
 //             ))}
-//           </CategorySection>
-//         ))}
+//         </div>
 //       </section>
 
-//       {/* Trending Section */}
-//       <section>
-//         <CategorySection categoryTitle="Trending Now" layout="grid">
-//           {trendingArticles.map((article) => (
+//       {/* Newsletter Signup */}
+//       <section className="bg-blue-50 p-6 rounded-lg">
+//         <h2 className="text-xl font-bold mb-4">Subscribe to our newsletter</h2>
+//         <form className="flex flex-col sm:flex-row gap-2">
+//           <input
+//             type="email"
+//             placeholder="Your email address"
+//             className="flex-grow px-4 py-2 rounded border focus:outline-none focus:ring-2 focus:ring-blue-500"
+//             required
+//           />
+//           <button
+//             type="submit"
+//             className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition-colors"
+//           >
+//             Subscribe
+//           </button>
+//         </form>
+//       </section>
+//     </main>
+//   );
+// };
 //             <div
 //               key={article.url}
 //               className="relative hover:bg-gray-50 transition-colors"
@@ -83,11 +152,11 @@
 
 // export default Home;
 
-import React from "react";
-import PostCard from "@/components/news/PostCard";
-import CategorySection from "@/components/news/CategorySection";
+// import React from "react";
+// import PostCard from "@/components/news/PostCard";
+// import CategorySection from "@/components/news/CategorySection";
 import { getCategoryArticles, getCategoryData } from "@/constant/data";
-import Link from "next/link";
+// import Link from "next/link";
 
 const featuredCategories = [
   "technology",

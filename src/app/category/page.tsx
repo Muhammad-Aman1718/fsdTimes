@@ -1,37 +1,45 @@
 import React from "react";
-import Link from "next/link";
-import { getCategoryData } from "@/constant/data";
+import SideBar from "@/components/layout/SideBar";
 
-const categorySlugs = [
-  "technology",
-  "business",
-  "health",
-  "climate",
-  "trending",
-  // Add more slugs if you add more categories in data.ts
+// =============================
+// Static Data (Categories Example)
+// =============================
+const categories = [
+  { slug: "tech", name: "Tech" },
+  { slug: "news", name: "News" },
+  { slug: "lifestyle", name: "Lifestyle" },
 ];
 
-const CategoriesPage = () => {
+const CategoryListPage = () => {
   return (
-    <main className="max-w-screen-xl mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-8 text-center">All Categories</h1>
-      <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-        {categorySlugs.map((slug) => {
-          const category = getCategoryData(slug);
-          return (
-            <Link
-              key={slug}
-              href={`/category/${slug}`}
-              className="block bg-white rounded-lg shadow hover:shadow-lg transition-shadow p-6 border border-gray-100 hover:border-red-600"
-            >
-              <h2 className="text-xl font-semibold mb-2 text-red-600">{category.title}</h2>
-              <p className="text-gray-600">{category.description}</p>
-            </Link>
-          );
-        })}
+    // Main layout: 2 columns (categories + sidebar)
+    <main className="max-w-screen-xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+      {/* ============================= */}
+      {/* Categories List Section       */}
+      {/* ============================= */}
+      <section className="md:col-span-2 bg-white rounded-lg shadow p-6">
+        <h1 className="text-2xl font-bold mb-4">All Categories</h1>
+        <ul className="space-y-2">
+          {categories.map((cat) => (
+            <li key={cat.slug}>
+              <a href={`/category/${cat.slug}`} className="text-blue-600 hover:underline">
+                {cat.name}
+              </a>
+            </li>
+          ))}
+        </ul>
       </section>
+
+      {/* ============================= */}
+      {/* Sidebar: Static Content       */}
+      {/* ============================= */}
+      <aside className="md:col-span-1">
+        <SideBar title="Sidebar">
+          <div className="text-sm text-gray-500">Yahan aap kuch bhi static ya useful info rakh sakte hain.</div>
+        </SideBar>
+      </aside>
     </main>
   );
 };
 
-export default CategoriesPage; 
+export default CategoryListPage; 

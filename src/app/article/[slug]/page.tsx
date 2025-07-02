@@ -15,7 +15,7 @@ const articles = [
     date: "2024-06-01",
     readTime: "5 min read",
     imageUrl: "/public/assets/images.jpeg",
-    content: `<p>This is the <strong>content</strong> of the first article. Blogging layout demo.</p>`
+    content: `<p>This is the <strong>content</strong> of the first article. Blogging layout demo.</p>`,
   },
   {
     slug: "second-article",
@@ -24,7 +24,7 @@ const articles = [
     date: "2024-06-02",
     readTime: "3 min read",
     imageUrl: "/public/assets/images.jpeg",
-    content: `<p>This is the <strong>content</strong> of the second article. Blogging layout demo.</p>`
+    content: `<p>This is the <strong>content</strong> of the second article. Blogging layout demo.</p>`,
   },
 ];
 

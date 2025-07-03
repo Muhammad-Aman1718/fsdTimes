@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import SideBar from "@/components/layout/SideBar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,11 +28,20 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-50 min-h-screen`}
         cz-shortcut-listen="true"
       >
         <Header />
-        {children}
+        <div className="max-w-screen-xl mx-auto flex gap-8 px-4 py-8">
+          {/* Sidebar (hidden on mobile) */}
+          <aside className="hidden lg:block w-72 shrink-0">
+            <SideBar />
+          </aside>
+          {/* Main content */}
+          <main className="flex-1 min-w-0">
+            {children}
+          </main>
+        </div>
         <Footer />
       </body>
     </html>

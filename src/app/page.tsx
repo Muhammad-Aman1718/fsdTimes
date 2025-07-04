@@ -56,6 +56,7 @@ const categories = [
   { slug: "typescript", name: "TypeScript" },
   { slug: "javascript", name: "JavaScript" },
   { slug: "web-development", name: "Web Development" },
+  { slug: "web-development", name: "Web Development" },
 ];
 
 const popularPosts = [

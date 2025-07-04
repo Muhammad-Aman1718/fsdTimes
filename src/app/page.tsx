@@ -1,6 +1,7 @@
 import React from "react";
 import SideBar from "@/components/layout/SideBar";
 import PostCard from "@/components/news/PostCard";
+import Link from "next/link";
 
 // =============================
 // Static Data (Home Page Example)
@@ -55,7 +56,6 @@ const categories = [
   { slug: "react", name: "React" },
   { slug: "typescript", name: "TypeScript" },
   { slug: "javascript", name: "JavaScript" },
-  { slug: "web-development", name: "Web Development" },
   { slug: "web-development", name: "Web Development" },
 ];
 
